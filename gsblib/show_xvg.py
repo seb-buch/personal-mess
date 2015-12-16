@@ -30,7 +30,6 @@ def run(args):
     mpl.rc('xtick', labelsize="x-large")
     mpl.rc('ytick', labelsize="x-large")
 
-
     title = "Title"
     xaxis_title = "X axis"
     yaxis_title = "Y axis"
@@ -53,9 +52,9 @@ def run(args):
 
                     if line[1] == "title":
                         title = " ".join(line[2:]).strip("\"")
-                    elif  line[1] == "xaxis":
+                    elif line[1] == "xaxis":
                         xaxis_title = " ".join(line[3:]).strip("\"")
-                    elif  line[1] == "yaxis":
+                    elif line[1] == "yaxis":
                         yaxis_title = " ".join(line[3:]).strip("\"")
                     elif line[1].startswith("s") and line[2] == "legend":
                         labels.append(" ".join(line[3:]).strip("\""))
@@ -63,11 +62,11 @@ def run(args):
                     line = [float(val) for val in line.split()]
                     x.append(line[0])
 
-                    for i,val in enumerate(line[1:]):
+                    for i, val in enumerate(line[1:]):
                         try:
                             ys[i].append(val)
                         except IndexError:
-                            ys.append([val,])
+                            ys.append([val, ])
     except IOError:
         print("ERROR: Could not read '%s'" % sys.argv[1])
         sys.exit(1)
@@ -86,9 +85,9 @@ def run(args):
     else:
         marker = "+"
 
-    for i,vals in enumerate(ys):
+    for i, vals in enumerate(ys):
         if len(labels) == 0:
-            label = "value #%i" % (i+1)
+            label = "value #%i" % (i + 1)
         else:
             label = labels[i]
 

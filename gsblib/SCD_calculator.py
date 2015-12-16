@@ -2,7 +2,7 @@
 # -*- coding: utf8 -*-
 """ SCD_calculator: Will do something fancy"""
 from __future__ import print_function, unicode_literals
-from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
+from argparse import ArgumentDefaultsHelpFormatter
 import os
 import sys
 import subprocess
