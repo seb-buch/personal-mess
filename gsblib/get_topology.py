@@ -3,7 +3,6 @@
 """ get_topology: Will do something fancy"""
 from __future__ import print_function
 from argparse import ArgumentDefaultsHelpFormatter
-import os
 
 __author__ = "Sébastien Buchoux"
 __email__ = "sebastien.buchoux@gmail.com"
